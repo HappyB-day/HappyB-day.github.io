@@ -16,11 +16,22 @@
     <style>
 
 .block{
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
     width: 50%;
     background-color: #fff;
     margin: 0 auto;
 }
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
 body {
+
     background-image: url(Image/Left.png), url(Image/Right.png), url(Image/Center.png);
     background-position: left top, right top, center;
     background-repeat: no-repeat;
