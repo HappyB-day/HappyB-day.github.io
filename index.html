@@ -3,8 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>С Днем Рождения</title>
+    <script type="text/javascript">
+        function init() {
+            var myAudio = document.getElementById("audio");
+            myAudio.addEventListener('ended', loopAudio, false);
+        }
+        function loopAudio() {
+            var myAudio = document.getElementById("audio");
+            myAudio.play();
+        }
+    </script>
     <style>
-    
+
 .block{
     width: 50%;
     background-color: #fff;
@@ -18,7 +28,8 @@ body {
     background-color: #e900fe;
 }
 </style>
-  <body>
+  <body onload="init();">
+     <audio id="audio" src="Music/Music.mp3" controls></audio>
     <br/>
 
 <div class="block" style="color:rgb(231,0,0)">
